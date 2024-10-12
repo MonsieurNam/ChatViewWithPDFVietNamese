@@ -10,13 +10,12 @@ from pydantic import BaseModel, Field
 from typing import Optional, List, Mapping, Any
 from langchain import PromptTemplate, LLMChain
 from langchain.chains import ConversationalRetrievalChain
-from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from groq import Groq
 from dotenv import load_dotenv
 from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.retrievers import BM25Retriever
+from langchain_community.retrievers import BM25Retriever
 
 # Load environment variables
 # load_dotenv()
