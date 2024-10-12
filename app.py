@@ -268,7 +268,7 @@ def main():
         st.session_state.messages = []
 
     # Title
-    st.title("Giáo dục Tiểu học Khóa 48-A2")
+    st.title("CHAT&VIEWWITHPDF")
 
     # Sidebar: Upload Files
     st.sidebar.header("📥 Upload Tệp Cần Thiết")
