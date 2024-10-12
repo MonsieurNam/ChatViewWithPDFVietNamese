@@ -2,7 +2,7 @@
 
 Welcome to the **PDF Chat Assistant**! This application allows you to upload PDF files for viewing and chat with them using the power of AI. Powered by **LangChain**, and **Groq's LLM**, it brings your static documents to life by giving you answers to your questions based on their content!
 
-
+Test app : https://testingchatviewwithpdf.streamlit.app/
 ## 🚀 Getting Started
 
 ### Prerequisites
