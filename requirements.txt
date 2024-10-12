@@ -1,0 +1,15 @@
+streamlit
+python-dotenv
+PyPDF2
+langchain
+langchain-community
+faiss-cpu
+huggingface-hub
+groq
+pydantic
+sentence-transformers
+langdetect
+PyMuPDF
+gdown
+rank_bm25
+pdf2image 
