@@ -251,7 +251,7 @@ def initialize_session_state(total_pages=0):
 # Main Function
 # -----------------------------
 def main():
-    st.set_page_config(page_title="Giáo dục Tiểu học Khóa 48-A2", layout="wide")
+    st.set_page_config(page_title="CHAT&VIEWWITHPDF", layout="wide")
     st.write(css, unsafe_allow_html=True)
 
     # Initialize session_state variables
