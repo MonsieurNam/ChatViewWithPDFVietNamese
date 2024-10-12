@@ -19,10 +19,10 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.retrievers import BM25Retriever
 
 # Load environment variables
-load_dotenv()
-groq_api_key = os.getenv("GROQ_API_TOKEN")
+# load_dotenv()
+# groq_api_key = os.getenv("GROQ_API_TOKEN")
 
-# groq_api_key = st.secrets["GROQ_API_TOKEN"]
+groq_api_key = st.secrets["GROQ_API_TOKEN"]
 # -----------------------------
 # CSS and HTML Templates
 # -----------------------------
