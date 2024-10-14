@@ -83,7 +83,7 @@ To get started with the **PDF Chat&View Assistant**, you will need to have:
 
 1. **Upload PDFs**: The user uploads PDFs that need to be processed.
 2. **Text Processing**: Text is extracted and split into chunks for easier embedding.
-3. **Viewing and Conversational Retrieval**: The AI searches through the document vectors to retrieve relevant information and answers questions.
+3. **Viewing and Conversational Retrieval**: View the PDF file and using the AI searches through the document to retrieve relevant information and answers questions.
 
 ## 🌟 Customization Options
 
@@ -96,20 +96,5 @@ To get started with the **PDF Chat&View Assistant**, you will need to have:
 - **PyPDF2**: For extracting text from PDFs.
 - **LangChain**: For conversational AI and document vectorization.
 - **Groq API**: Powers the conversational responses.
-
-## 🐞 Troubleshooting & Error Handling
-
-If you encounter any issues, don't worry! The app is equipped with robust error handling for:
-
-- **PDF Processing Failures**: Receive user-friendly error messages if a document fails to process.
-- **API Problems**: Notifies you if there’s a problem connecting to the Groq API.
-
-## 🎨 Aesthetic Chat Interface
-
-The chat interface is built for maximum readability and style:
-
-- **User Messages**: Dark theme with light text.
-- **AI Responses**: Highlighted in a contrasting color to distinguish between user and bot messages.
-- **Smooth UI**: Responsive and interactive, designed for ease of use!
 
 
