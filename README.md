@@ -19,7 +19,7 @@ To get started with the **PDF Chat&View Assistant**, you will need to have:
 1. **Clone the Repository**
 
    ```bash
-   https://github.com/MonsieurNam/Chat-ViewWithPDF.git
+   https://github.com/MonsieurNam/ChatViewWithPDFVietNamese.git
    ```
 
 2. **Install the Required Packages**
