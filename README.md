@@ -53,8 +53,7 @@ To get started with the **PDF Chat&View Assistant**, you will need to have:
    Attention to pre-prepare 3 file:
    - Your pdf file.pdf
    - Your text content of pdf file.pdf
-   - The structure of pdf file.txt:
-   + <mã phần>#<trang bắt đầu>#<trang kết thúc>#<tên phần>
+   - The structure of pdf file.txt: <mã phần>#<trang bắt đầu>#<trang kết thúc>#<tên phần>
    + EX:
    + a#001#009#NHỮNG QUỐC GIA ĐẦU TIÊN TRÊN LÃNH THỔ VIỆT NAM
    + b#010#082#XÂY DỰNG VÀ BẢO VỆ ĐẤT NƯỚC VIỆT NAM
