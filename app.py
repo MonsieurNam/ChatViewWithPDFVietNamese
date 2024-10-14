@@ -17,11 +17,19 @@ from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.retrievers import BM25Retriever
 
+load_dotenv()
 # Load environment variables
-# load_dotenv()
-# groq_api_key = os.getenv("GROQ_API_TOKEN")
-
-groq_api_key = st.secrets["GROQ_API_TOKEN"]
+try:
+    groq_api_key = os.getenv("GROQ_API_TOKEN")
+    if not groq_api_key:  # Check if the token is None or empty
+        raise ValueError("GROQ_API_TOKEN not found in environment variables.")
+except Exception as e:
+    # Fallback to Streamlit secrets
+    try:
+        groq_api_key = st.secrets["GROQ_API_TOKEN"]
+    except KeyError:
+        st.error("GROQ_API_TOKEN is missing from both environment variables and Streamlit secrets.")
+        raise e
 # -----------------------------
 # CSS and HTML Templates
 # -----------------------------
