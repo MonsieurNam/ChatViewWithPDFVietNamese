@@ -54,11 +54,11 @@ To get started with the **PDF Chat&View Assistant**, you will need to have:
    - Your pdf file.pdf
    - Your text content of pdf file.pdf
    - The structure of pdf file.txt:
-   <mã phần>#<trang bắt đầu>#<trang kết thúc>#<tên phần>
-   EX:
-   a#001#009#NHỮNG QUỐC GIA ĐẦU TIÊN TRÊN LÃNH THỔ VIỆT NAM
-   b#010#082#XÂY DỰNG VÀ BẢO VỆ ĐẤT NƯỚC VIỆT NAM
-   b1#010#016#Đấu tranh giành độc lập thời kì Bắc thuộc
+   + <mã phần>#<trang bắt đầu>#<trang kết thúc>#<tên phần>
+   + EX:
+   + a#001#009#NHỮNG QUỐC GIA ĐẦU TIÊN TRÊN LÃNH THỔ VIỆT NAM
+   + b#010#082#XÂY DỰNG VÀ BẢO VỆ ĐẤT NƯỚC VIỆT NAM
+   + b1#010#016#Đấu tranh giành độc lập thời kì Bắc thuộc
    .......
 
 
