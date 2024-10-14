@@ -1,13 +1,13 @@
-# 📚 PDF Chat Assistant optimize for Vietnamese !
+# 📚 PDF Chat&View Assistant optimize for Vietnamese !
 
-Welcome to the **PDF Chat Assistant**! This application allows you to upload PDF files for viewing and chat with them using the power of AI. Powered by **LangChain**, and **Groq's LLM**, it brings your static documents to life by giving you answers to your questions based on their content!
+Welcome to the **PDF Chat&View Assistant**! This application allows you to upload PDF files for viewing and chat with them using the power of AI. Powered by **LangChain**, and **Groq's LLM**, it brings your static documents to life by giving you answers to your questions based on their content!
 
 Test app : https://testingchatviewwithpdf.streamlit.app/
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-To get started with the **PDF Chat Assistant**, you will need to have:
+To get started with the **PDF Chat&View Assistant**, you will need to have:
 
 - **Python 3.8+**
 - **Streamlit**
