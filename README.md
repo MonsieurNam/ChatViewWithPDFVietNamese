@@ -3,6 +3,16 @@
 Welcome to the **PDF Chat&View Assistant**! This application allows you to upload PDF files for viewing and chat with them using the power of AI. Powered by **LangChain**, and **Groq's LLM**, it brings your static documents to life by giving you answers to your questions based on their content!
 
 Test app : https://chatviewwithpdfvietnamese.streamlit.app/
+
+
+<p align="center">
+  <img src="https://github.com/MonsieurNam/ChatViewWithPDFVietNamese/blob/main/image/Screenshot%202025-01-18%20220154.png" alt="Centered image" width="1200" height="400" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/MonsieurNam/ChatViewWithPDFVietNamese/blob/main/image/Screenshot%202025-01-18%20220114.png" alt="Centered image" width="1200" height="400" />
+</p>
+
 ## 🚀 Getting Started
 
 ### Prerequisites
