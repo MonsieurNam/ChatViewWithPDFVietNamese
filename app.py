@@ -251,7 +251,6 @@ def initialize_session_state(total_pages=0):
 # -----------------------------
 def main():
     st.set_page_config(page_title="CHAT&VIEWWITHPDF", layout="wide")
-    st.set_page_config(page_title="CHAT&VIEWWITHPDF", layout="wide")
     st.write(css, unsafe_allow_html=True)
 
     # Initialize session_state variables
@@ -268,7 +267,6 @@ def main():
         st.session_state.messages = []
 
     # Title
-    st.title("CHAT&VIEWWITHPDF")
     st.title("CHAT&VIEWWITHPDF")
 
     # Sidebar: Upload Files
