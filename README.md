@@ -6,7 +6,7 @@ This application allows you to:
 - Upload PDF files for easy viewing (page by page).
 - Chat with your PDFs in Vietnamese via an AI powered by LangChain, Groq's LLM, and BM25 Retrieval.
 
-Test app : https://chatviewwithpdfvietnamese.streamlit.app/
+Test app : [https://chatviewwithpdfvietnamese.streamlit.app/](https://chatviewwithpdfvietnamese.streamlit.app/)
 
 
 <p align="center">
