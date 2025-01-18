@@ -8,16 +8,15 @@ from langdetect import detect
 from langchain.llms.base import LLM
 from pydantic import BaseModel, Field
 from typing import Optional, List, Mapping, Any
-from langchain import PromptTemplate, LLMChain
 from langchain.chains import ConversationalRetrievalChain
-from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from groq import Groq
 from dotenv import load_dotenv
 from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.retrievers import BM25Retriever
-
+from langchain_core.prompts import PromptTemplate  # Thay thế
+from langchain.chains import LLMChain              # Thay thế
+from langchain_community.retrievers import BM25Retriever 
 # Load environment variables
 load_dotenv()
 groq_api_key = os.getenv("GROQ_API_TOKEN")
@@ -33,7 +32,7 @@ from htmlTemplates import *
 # -----------------------------
 class GroqWrapper(LLM, BaseModel):
     client: Groq = Field(default_factory=lambda: Groq(api_key=groq_api_key))
-    model_name: str = Field(default="llama3-8b-8192")
+    model_name: str = Field(default="llama-3.1-8b-instant")
     system_prompt: str = Field(default=(
         "Bạn là trợ lý AI chuyên về lịch sử Việt Nam và luôn luôn trả lời bằng tiếng Việt. "
         "Bạn cung cấp câu trả lời chính xác, chi tiết dựa trên nội dung tài liệu được cung cấp. "
@@ -251,7 +250,7 @@ def initialize_session_state(total_pages=0):
 # Main Function
 # -----------------------------
 def main():
-    st.set_page_config(page_title="Giáo dục Tiểu học Khóa 48-A2", layout="wide")
+    st.set_page_config(page_title="CHAT&VIEWWITHPDF", layout="wide")
     st.write(css, unsafe_allow_html=True)
 
     # Initialize session_state variables
@@ -268,7 +267,7 @@ def main():
         st.session_state.messages = []
 
     # Title
-    st.title("Giáo dục Tiểu học Khóa 48-A2")
+    st.title("CHAT&VIEWWITHPDF")
 
     # Sidebar: Upload Files
     st.sidebar.header("📥 Upload Tệp Cần Thiết")
