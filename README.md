@@ -1,6 +1,10 @@
-# 📚 PDF Chat&View Assistant optimize for Vietnamese !
+# 📚 PDF Chat & View Assistant (Optimized for Vietnamese)
 
-Welcome to the **PDF Chat&View Assistant**! This application allows you to upload PDF files for viewing and chat with them using the power of AI. Powered by **LangChain**, and **Groq's LLM**, it brings your static documents to life by giving you answers to your questions based on their content!
+## Welcome to the PDF Chat & View Assistant!
+This application allows you to:
+
+- Upload PDF files for easy viewing (page by page).
+- Chat with your PDFs in Vietnamese via an AI powered by LangChain, Groq's LLM, and BM25 Retrieval.
 
 Test app : https://chatviewwithpdfvietnamese.streamlit.app/
 
@@ -13,104 +17,123 @@ Test app : https://chatviewwithpdfvietnamese.streamlit.app/
   <img src="https://github.com/MonsieurNam/ChatViewWithPDFVietNamese/blob/main/image/Screenshot%202025-01-18%20220114.png" alt="Centered image" width="1200" height="400" />
 </p>
 
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
+- Python 3.8+
+- Streamlit
+- Groq API Token
+- (Optional but recommended) A virtual environment via venv, conda, etc.
 
-To get started with the **PDF Chat&View Assistant**, you will need to have:
-
-- **Python 3.8+**
-- **Streamlit**
-- **Hugging Face Transformers**
-- **Groq API Token**
+---
 
 ### Installation
 
-1. **Clone the Repository**
+#### Clone the Repository
+```bash
+git clone https://github.com/MonsieurNam/ChatViewWithPDFVietNamese.git
+```
+Or download the repo as a .zip and extract.
 
-   ```bash
-   https://github.com/MonsieurNam/ChatViewWithPDFVietNamese.git
-   ```
+#### Install Required Packages
+```bash
+cd ChatViewWithPDFVietNamese
+pip install -r requirements.txt
+```
 
-2. **Install the Required Packages**
-
-   Install all dependencies by running:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Set up Environment Variables**
-
-   Create a `.env` file in the root directory and add your **Groq API Token**:
-
-   ```plaintext
-   GROQ_API_TOKEN="your_groq_api_key_here"
-   ```
-### 🎯 How to Use
-
-1. **Run the Application**
-
-   Start the application using the following command:
-
-   ```bash
-   streamlit run app.py 
-   ```
-
-2. **Upload PDFs**
-
-   Use the document uploader on the right side of the page to upload your PDF files.
-   Attention to pre-prepare 3 file:
-   - Your pdf file.pdf
-   - Your text content of pdf file.pdf
-   - The structure of pdf file.txt: <mã phần>#<trang bắt đầu>#<trang kết thúc>#<tên phần>
-   + EX:
-   + a#001#009#NHỮNG QUỐC GIA ĐẦU TIÊN TRÊN LÃNH THỔ VIỆT NAM
-   + b#010#082#XÂY DỰNG VÀ BẢO VỆ ĐẤT NƯỚC VIỆT NAM
-   + b1#010#016#Đấu tranh giành độc lập thời kì Bắc thuộc
-   .......
+#### Set up Environment Variables
+Create a `.env` file in the app/ folder and add your Groq API Token:
+```env
+GROQ_API_TOKEN="your_groq_api_key_here"
+```
+Alternatively, you can set `GROQ_API_TOKEN` directly in your environment.
 
 
-3. **Ask Questions**
+## 🎯 How to Use
 
-   Once your documents are processed, you can start asking questions based on the content of your PDFs in the chat interface at sidebar.
+### Run the Application
+From the project root directory:
+```bash
+streamlit run app/app.py
+```
 
-4. **Customize the AI**
+### Upload PDFs
+On the Streamlit sidebar, you will see three upload prompts:
 
-   Modify the system prompt to change how the AI responds. For example, you can ask it to be more casual, technical, or creative!
+- `data.pdf` – The original PDF with images and text.
+- `data_content.pdf` – A PDF containing only the text for the chatbot.
+- `data_detail.txt` – A text file describing PDF structure in lines of the form:
+  ```plaintext
+  <section_code>#<start_page>#<end_page>#<section_name>
+  ```
+  For example:
+  ```plaintext
+  a#1#9#NHỮNG QUỐC GIA ĐẦU TIÊN TRÊN LÃNH THỔ VIỆT NAM
+  b#10#82#XÂY DỰNG VÀ BẢO VỆ ĐẤT NƯỚC VIỆT NAM
+  b1#10#16#Đấu tranh giành độc lập thời kì Bắc thuộc
+  ```
 
+The app automatically splits `data.pdf` into page-level PDFs, which are displayed on the main page.
 
-## 🛠️ Project Architecture
+### Ask Questions
+Once the documents are processed, a chat interface appears in the sidebar.
+Type your questions in Vietnamese (or your desired language), and the assistant will reply based on your PDF’s content.
 
-### Key Components:
+### View & Download
+- **View**: Each page is displayed as an image in the main section.
+- **Toggle**: "Hiển Thị Văn Bản Đã Trích Xuất" reveals the raw text extracted from each page.
+- **Download**: Use "Tải Xuống Trang PDF" or "Tải Xuống Văn Bản" to download individual pages or their extracted text.
 
-- **Streamlit**: Frontend interface and chat system.
-- **LangChain**: Manages conversational logic and connects your queries with document content.
-- **Hugging Face Embeddings**: Transforms document text into meaningful vector representations.
-- **Groq API**: The powerhouse behind generating intelligent responses based on document data.
-
-### Workflow
-
-1. **Upload PDFs**: The user uploads PDFs that need to be processed.
-2. **Text Processing**: Text is extracted and split into chunks for easier embedding.
-3. **Viewing and Conversational Retrieval**: View the PDF file and using the AI searches through the document to retrieve relevant information and answers questions.
+---
 
 ## 🌟 Customization Options
 
-- **System Prompt**: Customize the behavior of the AI by changing the system prompt.
-- **Temperature**: Adjust the temperature to control the creativity of responses.
+### System Prompt (in `groq_wrapper.py`):
+Adjust the `system_prompt` property to change the assistant’s overall style or constraints.
 
-## Technologies Used:
-- **Python**: Core programming language.
-- **Streamlit**: For the web interface.
-- **PyPDF2**: For extracting text from PDFs.
-- **LangChain**: For conversational AI and document vectorization.
-- **Groq API**: Powers the conversational responses.
-  
-## 🔮 Ongoing Develop:
-- **Automatic Content Extraction**: Automate the extraction of text and structure from uploaded PDFs, eliminating the need for manual preparation.
-- **Professional File Splitting**: Implement more advanced file splitting techniques to handle complex PDFs with multi-level hierarchies or irregular layouts.
-- **Multi-Language Optimization**: Enhance the AI’s performance in Vietnamese and other Southeast Asian languages for more accurate and nuanced responses.
-- **Real-Time Collaboration**: Enable multiple users to work with the same document simultaneously, with synchronized chat and edits.
-- **Improved Search Features**: Add advanced search capabilities, such as fuzzy matching and contextual highlighting, to refine document navigation.
+### Temperature:
+Change temperature in `_call()` for more or less creative responses (lower = more deterministic).
 
+---
+
+## 💡 Key Components
+
+- **Streamlit**: Front-end interface and container for the entire workflow.
+- **BM25Retriever**: A classical text retrieval method to quickly find relevant sections in PDF text.
+- **LangChain**: Manages the conversational chain and memory.
+- **Groq API**: Provides the LLM for natural language responses.
+
+---
+
+## ⚙️ Workflow
+
+1. **Uploads**: PDFs + TXT structure are uploaded.
+2. **Splitting & Parsing**:
+   - `data.pdf` is split into individual pages (`pdf_processing.split_pdf_into_pages`).
+   - `data_content.pdf` is extracted into text chunks (`get_pdf_text`, `get_text_chunks`).
+3. **BM25 Retrieval**:
+   - Text chunks are indexed with BM25 to find relevant sections on user queries.
+4. **Conversation**:
+   - `ConversationalRetrievalChain` (LangChain) uses `BM25Retriever` + the custom `Groq LLM` to answer user questions.
+5. **Display**:
+   - Pages rendered as images (`pymupdf_render_page_as_image`) and shown on the main page.
+   - Chat interface in the sidebar with a conversation history.
+
+---
+
+## 🔮 Ongoing Development
+
+- **Automatic Content Extraction**: Automate extraction of text & structure, reducing manual steps.
+- **Professional File Splitting**: Support advanced PDF splitting strategies for complex layouts.
+- **Multi-Language Optimization**: Enhance performance in Vietnamese and beyond.
+- **Real-Time Collaboration**: Multi-user editing and chat.
+
+---
+
+## Happy Chatting & Viewing!
+If you find this tool helpful, feel free to ⭐ star the repo or contribute via pull requests.
+
+For any issues or questions, open an issue on GitHub.
