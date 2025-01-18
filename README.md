@@ -106,5 +106,11 @@ To get started with the **PDF Chat&View Assistant**, you will need to have:
 - **PyPDF2**: For extracting text from PDFs.
 - **LangChain**: For conversational AI and document vectorization.
 - **Groq API**: Powers the conversational responses.
-
+  
+## 🔮 Ongoing Develop:
+- **Automatic Content Extraction**: Automate the extraction of text and structure from uploaded PDFs, eliminating the need for manual preparation.
+- **Professional File Splitting**: Implement more advanced file splitting techniques to handle complex PDFs with multi-level hierarchies or irregular layouts.
+- **Multi-Language Optimization**: Enhance the AI’s performance in Vietnamese and other Southeast Asian languages for more accurate and nuanced responses.
+- **Real-Time Collaboration**: Enable multiple users to work with the same document simultaneously, with synchronized chat and edits.
+- **Improved Search Features**: Add advanced search capabilities, such as fuzzy matching and contextual highlighting, to refine document navigation.
 
