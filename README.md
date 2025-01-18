@@ -107,7 +107,7 @@ To get started with the **PDF Chat&View Assistant**, you will need to have:
 - **LangChain**: For conversational AI and document vectorization.
 - **Groq API**: Powers the conversational responses.
   
-## 🔮 Customization Option
+## 🔮 Ongoing Develop:
 - **Automatic Content Extraction**: Automate the extraction of text and structure from uploaded PDFs, eliminating the need for manual preparation.
 - **Professional File Splitting**: Implement more advanced file splitting techniques to handle complex PDFs with multi-level hierarchies or irregular layouts.
 - **Multi-Language Optimization**: Enhance the AI’s performance in Vietnamese and other Southeast Asian languages for more accurate and nuanced responses.
