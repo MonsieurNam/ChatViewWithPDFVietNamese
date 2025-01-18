@@ -1,13 +1,13 @@
-# 📚 PDF Chat Assistant optimize for Vietnamese !
+# 📚 PDF Chat&View Assistant optimize for Vietnamese !
 
-Welcome to the **PDF Chat Assistant**! This application allows you to upload PDF files for viewing and chat with them using the power of AI. Powered by **LangChain**, and **Groq's LLM**, it brings your static documents to life by giving you answers to your questions based on their content!
+Welcome to the **PDF Chat&View Assistant**! This application allows you to upload PDF files for viewing and chat with them using the power of AI. Powered by **LangChain**, and **Groq's LLM**, it brings your static documents to life by giving you answers to your questions based on their content!
 
-
+Test app : https://chatviewwithpdfvietnamese.streamlit.app/
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-To get started with the **PDF Chat Assistant**, you will need to have:
+To get started with the **PDF Chat&View Assistant**, you will need to have:
 
 - **Python 3.8+**
 - **Streamlit**
@@ -19,7 +19,7 @@ To get started with the **PDF Chat Assistant**, you will need to have:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/MonsieurNam/ChatWF.git
+   https://github.com/MonsieurNam/ChatViewWithPDFVietNamese.git
    ```
 
 2. **Install the Required Packages**
@@ -53,12 +53,11 @@ To get started with the **PDF Chat Assistant**, you will need to have:
    Attention to pre-prepare 3 file:
    - Your pdf file.pdf
    - Your text content of pdf file.pdf
-   - The structure of pdf file.txt:
-   <mã phần>#<trang bắt đầu>#<trang kết thúc>#<tên phần>
-   EX:
-   a#001#009#NHỮNG QUỐC GIA ĐẦU TIÊN TRÊN LÃNH THỔ VIỆT NAM
-   b#010#082#XÂY DỰNG VÀ BẢO VỆ ĐẤT NƯỚC VIỆT NAM
-   b1#010#016#Đấu tranh giành độc lập thời kì Bắc thuộc
+   - The structure of pdf file.txt: <mã phần>#<trang bắt đầu>#<trang kết thúc>#<tên phần>
+   + EX:
+   + a#001#009#NHỮNG QUỐC GIA ĐẦU TIÊN TRÊN LÃNH THỔ VIỆT NAM
+   + b#010#082#XÂY DỰNG VÀ BẢO VỆ ĐẤT NƯỚC VIỆT NAM
+   + b1#010#016#Đấu tranh giành độc lập thời kì Bắc thuộc
    .......
 
 
@@ -84,7 +83,7 @@ To get started with the **PDF Chat Assistant**, you will need to have:
 
 1. **Upload PDFs**: The user uploads PDFs that need to be processed.
 2. **Text Processing**: Text is extracted and split into chunks for easier embedding.
-3. **Viewing and Conversational Retrieval**: The AI searches through the document vectors to retrieve relevant information and answers questions.
+3. **Viewing and Conversational Retrieval**: View the PDF file and using the AI searches through the document to retrieve relevant information and answers questions.
 
 ## 🌟 Customization Options
 
@@ -97,20 +96,5 @@ To get started with the **PDF Chat Assistant**, you will need to have:
 - **PyPDF2**: For extracting text from PDFs.
 - **LangChain**: For conversational AI and document vectorization.
 - **Groq API**: Powers the conversational responses.
-
-## 🐞 Troubleshooting & Error Handling
-
-If you encounter any issues, don't worry! The app is equipped with robust error handling for:
-
-- **PDF Processing Failures**: Receive user-friendly error messages if a document fails to process.
-- **API Problems**: Notifies you if there’s a problem connecting to the Groq API.
-
-## 🎨 Aesthetic Chat Interface
-
-The chat interface is built for maximum readability and style:
-
-- **User Messages**: Dark theme with light text.
-- **AI Responses**: Highlighted in a contrasting color to distinguish between user and bot messages.
-- **Smooth UI**: Responsive and interactive, designed for ease of use!
 
 
